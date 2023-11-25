@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="594.0" prefWidth="868.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="homeScreenController">
+   <children>
+      <AnchorPane layoutX="13.0" layoutY="10.0" prefHeight="297.0" prefWidth="841.0" styleClass="top_frame" stylesheets="@mainframe.css">
+         <children>
+            <Text layoutX="25.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Balance">
+               <font>
+                  <Font name="Yu Gothic Light" size="17.0" />
+               </font>
+            </Text>
+            <Line endX="731.3333129882812" layoutX="81.0" layoutY="23.0" opacity="0.1" startX="-60.5" />
+            <Text fill="#0033ff" layoutX="57.0" layoutY="84.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Your Current Balance:">
+               <font>
+                  <Font name="Yu Gothic UI Semilight" size="24.0" />
+               </font>
+            </Text>
+            <Text fill="#0044ff" layoutX="512.0" layoutY="83.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Your Cards">
+               <font>
+                  <Font name="Yu Gothic UI Semilight" size="24.0" />
+               </font>
+            </Text>
+            <Text layoutX="499.0" layoutY="162.0" opacity="0.42" strokeType="OUTSIDE" strokeWidth="0.0" text="No cards yet.. Select &quot;Add Card&quot;" wrappingWidth="177.13671875" />
+            <Text fx:id="currentBalanceText" layoutX="84.0" layoutY="166.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="177.13671875">
+               <font>
+                  <Font size="23.0" />
+               </font>
+            </Text>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="14.0" layoutY="319.0" prefHeight="265.0" prefWidth="404.0" styleClass="top_frame" stylesheets="@mainframe.css">
+         <children>
+            <Text layoutX="23.0" layoutY="21.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Accounts">
+               <font>
+                  <Font name="Yu Gothic Light" size="17.0" />
+               </font>
+            </Text>
+            <Line endX="176.33334350585938" layoutX="83.0" layoutY="27.0" opacity="0.1" startX="-63.833335876464844" />
+            <ListView fx:id="accountsListView" editable="true" layoutX="23.0" layoutY="42.0" onMouseClicked="#handleAccountSelection" prefHeight="164.0" prefWidth="344.0" style="-fx-background-radius: 20;" />
+            <Button fx:id="deleteButton" layoutX="169.0" layoutY="219.0" mnemonicParsing="false" text="Delete" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="434.0" layoutY="319.0" prefHeight="265.0" prefWidth="417.0" styleClass="top_frame" stylesheets="@mainframe.css">
+         <children>
+            <Text layoutX="22.0" layoutY="21.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Actions">
+               <font>
+                  <Font name="Yu Gothic Light" size="17.0" />
+               </font>
+            </Text>
+            <Line endX="176.33334350585938" layoutX="77.0" layoutY="28.0" opacity="0.1" startX="-63.833335876464844" />
+            <AnchorPane layoutX="22.0" layoutY="44.0" prefHeight="53.0" prefWidth="335.0" style="-fx-background-radius: 30;" styleClass="inner_box_frame" stylesheets="@mainframe.css">
+               <children>
+                  <Text fill="#0033ff" layoutX="73.0" layoutY="33.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Add Card" wrappingWidth="113.3671875">
+                     <font>
+                        <Font name="Yu Gothic UI Semilight" size="18.0" />
+                     </font>
+                  </Text>
+                  <ButtonBar layoutX="68.0" layoutY="8.0" prefHeight="40.0" prefWidth="200.0" />
+                  <Button layoutX="31.0" layoutY="13.0" minWidth="22.0" mnemonicParsing="false" onAction="#handleAddNewCard" prefHeight="25.0" text="+" />
+               </children></AnchorPane>
+            <AnchorPane layoutX="23.0" layoutY="112.0" prefHeight="53.0" prefWidth="335.0" style="-fx-background-radius: 30;" styleClass="inner_box_frame" stylesheets="@mainframe.css">
+               <children>
+                  <Text fill="#0033ff" layoutX="74.0" layoutY="33.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Create Checking Account" wrappingWidth="232.3671875">
+                     <font>
+                        <Font name="Yu Gothic UI Semilight" size="18.0" />
+                     </font>
+                  </Text>
+                  <Button layoutX="29.0" layoutY="14.0" minWidth="22.0" mnemonicParsing="false" onAction="#handleCreateNewCheckings" prefHeight="25.0" text="+" />
+               </children></AnchorPane>
+            <AnchorPane layoutX="21.0" layoutY="183.0" prefHeight="53.0" prefWidth="335.0" style="-fx-background-radius: 30;" styleClass="inner_box_frame" stylesheets="@mainframe.css">
+               <children>
+                  <Text fill="#0033ff" layoutX="71.0" layoutY="33.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Create Savings Account" wrappingWidth="232.3671875">
+                     <font>
+                        <Font name="Yu Gothic UI Semilight" size="18.0" />
+                     </font>
+                  </Text>
+                  <Button layoutX="32.0" layoutY="14.0" minWidth="22.0" mnemonicParsing="false" onAction="#handleCreateNewSavings" prefHeight="25.0" text="+" />
+               </children></AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

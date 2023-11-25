@@ -1,0 +1,33 @@
+/* styles.css */
+.side_frame {
+    -fx-background-color: rgba(220, 220, 220, 0.307);
+    -fx-background-radius: 30
+    ;
+}
+
+.anchor_pane {
+    -fx-background-color: rgb(224, 224, 224);
+
+}
+
+.top_frame {
+    -fx-background-color: rgb(235, 235, 235);
+    -fx-background-radius: 30
+    ;
+
+}
+
+.inner_box_frame{
+    -fx-background-color: rgb(220, 220, 220);
+    -fx-background-radius: 30
+    ;
+    
+}
+
+.add_button {
+    -fx-background-color: rgba(0, 98, 255, 0.282);
+}
+
+.mainAnchorPane {
+    -fx-background-color: linear-gradient(to bottom, #3498db, #ffffff);
+}

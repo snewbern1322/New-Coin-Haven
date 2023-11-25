@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="594.0" prefWidth="868.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Text fill="#0033ff" layoutX="45.0" layoutY="61.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Add Funds">
+         <font>
+            <Font name="Yu Gothic Light" size="39.0" />
+         </font>
+      </Text>
+      <AnchorPane layoutX="30.0" layoutY="91.0" prefHeight="159.0" prefWidth="804.0" styleClass="top_frame" stylesheets="@mainframe.css">
+         <children>
+            <Text layoutX="64.0" layoutY="41.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Welcome to our Add Funds page, designed to provide you with a seamless and secure experience in managing your finances. This feature allows you to effortlessly add funds to your accounts, putting you in control of your financial well-being. Whether you're saving for the future, planning for a special occasion, or simply ensuring that your accounts remain robust, our Add Funds page simplifies the process." wrappingWidth="676.13671875">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Text>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="32.0" layoutY="283.0" prefHeight="200.0" prefWidth="804.0" styleClass="top_frame" stylesheets="@mainframe.css">
+         <children>
+            <Text layoutX="115.0" layoutY="77.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Select an account:" wrappingWidth="170.2822265625">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Text>
+            <Text layoutX="448.0" layoutY="77.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Amount:" wrappingWidth="170.2822265625">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Text>
+            <ComboBox layoutX="101.0" layoutY="100.0" prefHeight="25.0" prefWidth="201.0" style="-fx-background-radius: 10;" />
+            <TextField layoutX="437.0" layoutY="100.0" prefHeight="25.0" prefWidth="186.0" promptText="\$" style="-fx-background-radius: 10;" />
+            <Button layoutX="674.0" layoutY="144.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="83.0" style="-fx-background-radius: 10;" styleClass="add_button" stylesheets="@mainframe.css" text="Confirm" />
+         </children>
+      </AnchorPane>
+      <Line endX="668.0" layoutX="150.0" layoutY="77.0" opacity="0.19" startX="-100.0" />
+   </children>
+</AnchorPane>

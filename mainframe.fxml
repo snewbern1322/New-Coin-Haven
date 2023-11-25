@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="650.0" prefWidth="1080.0" styleClass="anchor_pane" stylesheets="@mainframe.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="MainFrameController">
+   <children>
+      <BorderPane fx:id="mainPane" layoutX="12.0" layoutY="11.0" prefHeight="623.0" prefWidth="1057.0" styleClass="anchor_pane" stylesheets="@mainframe.css">
+         <left>
+            <VBox alignment="CENTER" blendMode="HARD_LIGHT" opacity="0.85" prefHeight="623.0" prefWidth="156.0" style="-fx-background-radius: 20; -fx-background-color: rgba(220, 220, 220, 0.307);" BorderPane.alignment="CENTER">
+               <BorderPane.margin>
+                  <Insets right="10.0" />
+               </BorderPane.margin>
+               <effect>
+                  <DropShadow height="196.68" radius="97.885" width="196.86">
+                     <color>
+                        <Color opacity="0.5229008197784424" />
+                     </color>
+                  </DropShadow>
+               </effect>
+               <padding>
+                  <Insets top="10.0" />
+               </padding>
+               <children>
+                  <Button mnemonicParsing="false" onAction="#handleAddFunds" prefHeight="63.0" prefWidth="101.0" style="-fx-background-radius: 30; -fx-background-color: #5D77FE;" text="Add Funds" textFill="WHITE">
+                     <VBox.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </VBox.margin>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#handleTransferButton" prefHeight="65.0" prefWidth="100.0" style="-fx-background-radius: 30; -fx-background-color: #5D77FE;" text="Transfer" textFill="WHITE">
+                     <VBox.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </VBox.margin>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#handleHomePage" prefHeight="63.0" prefWidth="101.0" style="-fx-background-radius: 30; -fx-background-color: #5D77FE;" text="Dashboard" textFill="WHITE">
+                     <VBox.margin>
+                        <Insets left="10.0" right="10.0" top="10.0" />
+                     </VBox.margin>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#handleUserSettings" prefHeight="68.0" prefWidth="97.0" style="-fx-background-radius: 30; -fx-background-color: #5D77FE;" text="User Settings" textFill="WHITE">
+                     <VBox.margin>
+                        <Insets bottom="-50.0" left="10.0" right="10.0" top="200.0" />
+                     </VBox.margin>
+                  </Button>
+               </children>
+            </VBox>
+         </left>
+      </BorderPane>
+      <VBox disable="true" visible="false" />
+      <Label fx:id="welcomeLabel" disable="true" layoutX="857.0" layoutY="244.0" text="Welcome to Coin Haven Main Frame!" visible="false" />
+      <Line disable="true" endX="-79.0" endY="408.0" layoutX="214.0" layoutY="97.0" opacity="0.52" startX="-79.0" startY="14.0" stroke="#0000002b" visible="false" />
+      <AnchorPane disable="true" layoutX="152.0" layoutY="26.0" prefHeight="296.0" prefWidth="878.0" styleClass="top_frame" stylesheets="@mainframe.css" visible="false">
+         <children>
+            <Text layoutX="28.0" layoutY="29.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Balance" wrappingWidth="121.0">
+               <font>
+                  <Font name="Yu Gothic Light" size="17.0" />
+               </font>
+            </Text>
+            <Line endX="555.0" layoutX="293.0" layoutY="40.0" opacity="0.62" startX="-278.0" stroke="#6680fe" />
+            <Text layoutX="28.0" layoutY="101.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Current Balance:" wrappingWidth="272.9830722808838">
+               <font>
+                  <Font name="Yu Gothic UI Semilight" size="33.0" />
+               </font>
+            </Text>
+            <Text layoutX="580.0" layoutY="97.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Your Cards" wrappingWidth="166.9830722808838">
+               <font>
+                  <Font name="Yu Gothic UI Semilight" size="25.0" />
+               </font>
+            </Text>
+            <Text layoutX="602.0" layoutY="174.0" opacity="0.49" strokeType="OUTSIDE" strokeWidth="0.0" text="No cards yet..." />
+         </children>
+      </AnchorPane>
+      <AnchorPane disable="true" layoutX="152.0" layoutY="334.0" prefHeight="296.0" prefWidth="439.0" styleClass="top_frame" stylesheets="@mainframe.css" visible="false">
+         <children>
+            <Text layoutX="25.0" layoutY="32.0" opacity="0.81" strokeType="OUTSIDE" strokeWidth="0.0" text="Accounts" wrappingWidth="79.98307228088379">
+               <font>
+                  <Font name="Yu Gothic Light" size="17.0" />
+               </font>
+            </Text>
+            <Line endX="305.0" layoutX="115.0" layoutY="43.0" opacity="0.62" startX="-100.0" stroke="#6680fe" />
+            <Text layoutX="166.0" layoutY="153.0" opacity="0.47" strokeType="OUTSIDE" strokeWidth="0.0" text="No accounts yet..." />
+         </children>
+      </AnchorPane>
+      <AnchorPane disable="true" layoutX="607.0" layoutY="334.0" prefHeight="296.0" prefWidth="423.0" styleClass="top_frame" stylesheets="@mainframe.css" visible="false">
+         <children>
+            <AnchorPane layoutX="9.0" layoutY="57.0" prefHeight="63.0" prefWidth="406.0" styleClass="inner_box_frame" stylesheets="@mainframe.css" />
+            <AnchorPane layoutX="10.0" layoutY="136.0" prefHeight="63.0" prefWidth="406.0" styleClass="inner_box_frame" stylesheets="@mainframe.css" />
+            <AnchorPane layoutX="10.0" layoutY="211.0" prefHeight="63.0" prefWidth="406.0" styleClass="inner_box_frame" stylesheets="@mainframe.css" />
+            <Text layoutX="26.0" layoutY="29.0" opacity="0.81" strokeType="OUTSIDE" strokeWidth="0.0" text="Actions" wrappingWidth="79.98307228088379">
+               <font>
+                  <Font name="Yu Gothic Light" size="17.0" />
+               </font>
+            </Text>
+            <Line endX="234.0" layoutX="170.0" layoutY="42.0" opacity="0.62" startX="-151.0" stroke="#6680fe" />
+            <Button layoutX="39.0" layoutY="72.0" mnemonicParsing="false" style="-fx-background-color: DCDCDC; -fx-background-radius: 25;" text="+" />
+            <Button layoutX="39.0" layoutY="150.0" mnemonicParsing="false" style="-fx-background-color: DCDCDC; -fx-background-radius: 25;" text="+" />
+            <Button layoutX="39.0" layoutY="227.0" mnemonicParsing="false" style="-fx-background-color: DCDCDC; -fx-background-radius: 25;" text="+" />
+            <Text layoutX="108.0" layoutY="93.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Create Checkings Account" wrappingWidth="206.80859375">
+               <font>
+                  <Font name="Yu Gothic UI Semilight" size="17.0" />
+               </font>
+            </Text>
+            <Text layoutX="108.0" layoutY="173.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Create Savings Account" wrappingWidth="206.80859375">
+               <font>
+                  <Font name="Yu Gothic UI Semilight" size="17.0" />
+               </font>
+            </Text>
+            <Text layoutX="108.0" layoutY="248.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Add New Card" wrappingWidth="206.80859375">
+               <font>
+                  <Font name="Yu Gothic UI Semilight" size="17.0" />
+               </font>
+            </Text>
+         </children>
+      </AnchorPane>
+      <Text disable="true" layoutX="14.0" layoutY="51.0" opacity="0.51" smooth="false" strokeType="OUTSIDE" strokeWidth="0.0" text="Welcome" visible="false" wrappingWidth="121.0">
+         <font>
+            <Font name="Yu Gothic Light" size="27.0" />
+         </font>
+      </Text>
+      <AnchorPane blendMode="HARD_LIGHT" layoutY="111.0" prefHeight="395.0" prefWidth="115.0" styleClass="side_frame" stylesheets="@mainframe.css" visible="false">
+         <effect>
+            <DropShadow blurType="GAUSSIAN" height="211.52" radius="107.45750000000001" width="220.31" />
+         </effect>
+         <children>
+            <Line endX="12.0" layoutX="62.0" layoutY="22.0" opacity="0.42" startX="-14.5" />
+            <Line endX="12.0" layoutX="62.0" layoutY="33.0" opacity="0.42" startX="-14.5" />
+            <Line endX="12.0" layoutX="62.0" layoutY="43.0" opacity="0.42" startX="-14.5" />
+            <Line endX="41.0" layoutX="60.0" layoutY="318.0" opacity="0.42" startX="-42.0" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

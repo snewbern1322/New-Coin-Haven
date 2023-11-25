@@ -1,0 +1,13 @@
+-give functionality to program (Buttons, db, user info, etc)
+
+
+-make user info appear in user settings
+-make funds of selected account appear in dashboard
+-make create cards appear in dashboard
+-assign added funds to accounts
+-allow funds to be transfered between accounts
+-allow funds to be added to accounts
+-allow users to edit user information in settings
+
+
+
