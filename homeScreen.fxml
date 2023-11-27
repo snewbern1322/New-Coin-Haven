@@ -29,9 +29,14 @@
                </font>
             </Text>
             <Text layoutX="499.0" layoutY="162.0" opacity="0.42" strokeType="OUTSIDE" strokeWidth="0.0" text="No cards yet.. Select &quot;Add Card&quot;" wrappingWidth="177.13671875" />
-            <Text fx:id="currentBalanceText" layoutX="84.0" layoutY="166.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="177.13671875">
+            <Text fx:id="currentBalanceText" layoutX="84.0" layoutY="168.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="344.0">
                <font>
-                  <Font size="23.0" />
+                  <Font name="Yu Gothic Light" size="58.0" />
+               </font>
+            </Text>
+            <Text fill="#18ee00" layoutX="57.0" layoutY="167.0" strokeType="OUTSIDE" strokeWidth="0.0" text="\$" wrappingWidth="25.0">
+               <font>
+                  <Font name="Yu Gothic UI Light" size="45.0" />
                </font>
             </Text>
          </children>

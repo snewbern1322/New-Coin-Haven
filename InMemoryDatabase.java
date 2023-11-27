@@ -1,5 +1,8 @@
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
 
 public class InMemoryDatabase {
     private static ArrayList<HashMap<String, String>> users = new ArrayList<>();
@@ -84,7 +87,7 @@ public class InMemoryDatabase {
     }
     
     // Helper method to determine the account type based on the accountName
-    private static String getAccountType(String accountName) {
+    public static String getAccountType(String accountName) {
         System.out.println("Checking account type for: " + accountName);
         if (accountName.toLowerCase().contains("savings")) {
             return "savings";
@@ -109,5 +112,50 @@ public class InMemoryDatabase {
         }
     }
     
-    // Additional methods for accessing data in-memory
+    // Add itional methods for accessing data in-memory
+    public static void updateSavingsAccountBalance(String accountName, double amount) {
+        for (HashMap<String, String> account : savingsAccounts) {
+            if (account.get("accountName").equals(accountName)) {
+                double currentBalance = Double.parseDouble(account.get("startingBalance"));
+                double newBalance = currentBalance + amount;
+                account.put("startingBalance", Double.toString(newBalance));
+                System.out.println("Savings account balance updated: " + newBalance);
+                break;
+            }
+        }
+    }
+    
+    public static void updateCheckingAccountBalance(String accountName, double amount) {
+        for (HashMap<String, String> account : checkingAccounts) {
+            if (account.get("accountName").equals(accountName)) {
+                double currentBalance = Double.parseDouble(account.get("startingBalance"));
+                double newBalance = currentBalance + amount;
+                account.put("startingBalance", Double.toString(newBalance));
+                System.out.println("Checking account balance updated: " + newBalance);
+                break;
+            }
+        }
+    }
+
+    // Method to get a list of all account names
+    public static List<String> getAccountNames() {
+        Set<String> uniqueAccountNames = new HashSet<>();
+
+        for (HashMap<String, String> savingsAccount : savingsAccounts) {
+            uniqueAccountNames.add(savingsAccount.get("accountName"));
+        }
+
+        for (HashMap<String, String> checkingAccount : checkingAccounts) {
+            uniqueAccountNames.add(checkingAccount.get("accountName"));
+        }
+
+        // Add other account types if needed
+
+        return new ArrayList<>(uniqueAccountNames);
+    }
+
+
+
+    
+
 }

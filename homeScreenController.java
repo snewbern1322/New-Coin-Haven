@@ -1,3 +1,4 @@
+import javafx.application.Platform;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -64,27 +65,28 @@ public class homeScreenController {
     private void handleAccountSelection() {
         String selectedAccount = accountsListView.getSelectionModel().getSelectedItem();
         System.out.println("Selected Account: " + selectedAccount);
-    
-        // Handle potential whitespace in the selected account name
+
+    // Handle potential whitespace in the selected account name
         selectedAccount = selectedAccount.trim();
         System.out.println("Trimmed Account Name: " + selectedAccount);
 
-    
-        // Assuming you have a method in InMemoryDatabase to get the starting balance by account name
+    // Assuming you have a method in InMemoryDatabase to get the starting balance by account name
         String startingBalance = InMemoryDatabase.getStartingBalance(selectedAccount);
-    
-        // Check if the starting balance is a valid double
+        System.out.println("Starting Balance retrieved: " + startingBalance);
+
         try {
             double balance = Double.parseDouble(startingBalance);
-    
-            // Update the Text field with the starting balance
+
+        // Update the Text field with the starting balance on the JavaFX Application Thread
+        Platform.runLater(() -> {
             currentBalanceText.setText(String.valueOf(balance));
-        } catch (NumberFormatException e) {
-            // Handle the case where the starting balance is not a valid double
+            System.out.println("Balance updated successfully.");
+        });
+      } catch (NumberFormatException e) {
+        // Handle the case where the starting balance is not a valid double
             System.err.println("Error parsing starting balance to double: " + e.getMessage());
-    
-            // Optionally, you can display an error message or take other actions
-        }
+        // Optionally, you can display an error message or take other actions
+    }
     }
 
 
