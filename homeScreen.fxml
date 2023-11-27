@@ -3,6 +3,8 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ButtonBar?>
 <?import javafx.scene.control.ListView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
@@ -28,17 +30,17 @@
                   <Font name="Yu Gothic UI Semilight" size="24.0" />
                </font>
             </Text>
-            <Text layoutX="499.0" layoutY="162.0" opacity="0.42" strokeType="OUTSIDE" strokeWidth="0.0" text="No cards yet.. Select &quot;Add Card&quot;" wrappingWidth="177.13671875" />
-            <Text fx:id="currentBalanceText" layoutX="84.0" layoutY="168.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="344.0">
+            <Text fx:id="currentBalanceText" layoutX="89.0" layoutY="188.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="327.0">
                <font>
-                  <Font name="Yu Gothic Light" size="58.0" />
+                  <Font name="Yu Gothic Light" size="64.0" />
                </font>
             </Text>
-            <Text fill="#18ee00" layoutX="57.0" layoutY="167.0" strokeType="OUTSIDE" strokeWidth="0.0" text="\$" wrappingWidth="25.0">
+            <Text layoutX="57.0" layoutY="167.0" strokeType="OUTSIDE" strokeWidth="0.0" text="\$" wrappingWidth="25.0">
                <font>
-                  <Font name="Yu Gothic UI Light" size="45.0" />
+                  <Font name="Yu Gothic Light" size="45.0" />
                </font>
             </Text>
+            <Line endX="7.0" endY="185.0" layoutX="381.0" layoutY="58.0" opacity="0.11" startX="7.0" startY="26.0" />
          </children>
       </AnchorPane>
       <AnchorPane layoutX="14.0" layoutY="319.0" prefHeight="265.0" prefWidth="404.0" styleClass="top_frame" stylesheets="@mainframe.css">
@@ -49,8 +51,8 @@
                </font>
             </Text>
             <Line endX="176.33334350585938" layoutX="83.0" layoutY="27.0" opacity="0.1" startX="-63.833335876464844" />
-            <ListView fx:id="accountsListView" editable="true" layoutX="23.0" layoutY="42.0" onMouseClicked="#handleAccountSelection" prefHeight="164.0" prefWidth="344.0" style="-fx-background-radius: 20;" />
-            <Button fx:id="deleteButton" layoutX="169.0" layoutY="219.0" mnemonicParsing="false" text="Delete" />
+            <ListView fx:id="accountsListView" editable="true" layoutX="23.0" layoutY="42.0" onMouseClicked="#handleAccountSelection" prefHeight="164.0" prefWidth="344.0" />
+            <Button fx:id="deleteButton" layoutX="146.0" layoutY="217.0" mnemonicParsing="false" style="-fx-background-radius: 10;" text="Delete Account" />
          </children>
       </AnchorPane>
       <AnchorPane layoutX="434.0" layoutY="319.0" prefHeight="265.0" prefWidth="417.0" styleClass="top_frame" stylesheets="@mainframe.css">
@@ -68,26 +70,50 @@
                         <Font name="Yu Gothic UI Semilight" size="18.0" />
                      </font>
                   </Text>
-                  <ButtonBar layoutX="68.0" layoutY="8.0" prefHeight="40.0" prefWidth="200.0" />
-                  <Button layoutX="31.0" layoutY="13.0" minWidth="22.0" mnemonicParsing="false" onAction="#handleAddNewCard" prefHeight="25.0" text="+" />
+                  <ButtonBar layoutX="68.0" layoutY="8.0" prefHeight="40.0" prefWidth="87.0" />
+                  <Button layoutX="14.0" layoutY="6.0" minWidth="22.0" mnemonicParsing="false" onAction="#handleAddNewCard" prefHeight="32.0" prefWidth="42.0" style="-fx-background-radius: 15;" stylesheets="@../Java%20Code/mainframe.css" text="+">
+                     <font>
+                        <Font size="19.0" />
+                     </font></Button>
+                  <ImageView fitHeight="40.0" fitWidth="34.0" layoutX="155.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="file:/C:/Users/Steven%20N/Desktop/OU%20College/credit-cards.png" />
+                     </image>
+                  </ImageView>
                </children></AnchorPane>
             <AnchorPane layoutX="23.0" layoutY="112.0" prefHeight="53.0" prefWidth="335.0" style="-fx-background-radius: 30;" styleClass="inner_box_frame" stylesheets="@mainframe.css">
                <children>
-                  <Text fill="#0033ff" layoutX="74.0" layoutY="33.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Create Checking Account" wrappingWidth="232.3671875">
+                  <Text fill="#0033ff" layoutX="74.0" layoutY="33.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Create Checkings Account" wrappingWidth="232.3671875">
                      <font>
-                        <Font name="Yu Gothic UI Semilight" size="18.0" />
+                        <Font name="Yu Gothic UI Semilight" size="17.0" />
                      </font>
                   </Text>
-                  <Button layoutX="29.0" layoutY="14.0" minWidth="22.0" mnemonicParsing="false" onAction="#handleCreateNewCheckings" prefHeight="25.0" text="+" />
+                  <Button layoutX="14.0" layoutY="6.0" minWidth="22.0" mnemonicParsing="false" onAction="#handleCreateNewCheckings" prefHeight="40.0" prefWidth="42.0" style="-fx-background-radius: 15;" text="+">
+                     <font>
+                        <Font size="19.0" />
+                     </font></Button>
+                  <ImageView fitHeight="34.0" fitWidth="34.0" layoutX="272.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="file:/C:/Users/Steven%20N/Desktop/OU%20College/wallet.png" />
+                     </image>
+                  </ImageView>
                </children></AnchorPane>
             <AnchorPane layoutX="21.0" layoutY="183.0" prefHeight="53.0" prefWidth="335.0" style="-fx-background-radius: 30;" styleClass="inner_box_frame" stylesheets="@mainframe.css">
                <children>
                   <Text fill="#0033ff" layoutX="71.0" layoutY="33.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Create Savings Account" wrappingWidth="232.3671875">
                      <font>
-                        <Font name="Yu Gothic UI Semilight" size="18.0" />
+                        <Font name="Yu Gothic UI Semilight" size="17.0" />
                      </font>
                   </Text>
-                  <Button layoutX="32.0" layoutY="14.0" minWidth="22.0" mnemonicParsing="false" onAction="#handleCreateNewSavings" prefHeight="25.0" text="+" />
+                  <Button layoutX="14.0" layoutY="7.0" minWidth="22.0" mnemonicParsing="false" onAction="#handleCreateNewSavings" prefHeight="40.0" prefWidth="42.0" style="-fx-background-radius: 15;" text="+">
+                     <font>
+                        <Font size="19.0" />
+                     </font></Button>
+                  <ImageView fitHeight="40.0" fitWidth="34.0" layoutX="249.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="file:/C:/Users/Steven%20N/Desktop/OU%20College/piggy-bank.png" />
+                     </image>
+                  </ImageView>
                </children></AnchorPane>
          </children>
       </AnchorPane>

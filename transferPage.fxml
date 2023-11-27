@@ -53,8 +53,8 @@
                </font>
             </Text>
             <Button fx:id="confirmButton" layoutX="655.0" layoutY="149.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="95.0" style="-fx-background-radius: 15; -fx-background-color: CCD6FE;" styleClass="top_frame" stylesheets="@login.css" text="Confirm" textFill="#323232" />
-            <ComboBox fx:id="fromComboBox" layoutX="47.0" layoutY="124.0" prefHeight="25.0" prefWidth="135.0" styleClass="inner_box_frame" stylesheets="@mainframe.css" />
-            <ComboBox fx:id="toComboBox" layoutX="221.0" layoutY="124.0" prefHeight="25.0" prefWidth="135.0" style="-fx-background-radius: 12;" styleClass="inner_box_frame" />
+            <ComboBox fx:id="fromComboBox" layoutX="47.0" layoutY="124.0" prefHeight="25.0" prefWidth="135.0" style="-fx-background-radius: 12;" stylesheets="@mainframe.css" />
+            <ComboBox fx:id="toComboBox" layoutX="221.0" layoutY="124.0" prefHeight="25.0" prefWidth="135.0" style="-fx-background-radius: 12;" />
             <TextField fx:id="amountTextField" layoutX="433.0" layoutY="124.0" promptText="\$" style="-fx-background-radius: 12;" />
          </children>
       </AnchorPane>

@@ -37,6 +37,21 @@
                   <Button layoutX="673.0" layoutY="17.0" mnemonicParsing="false" style="-fx-background-radius: 8;" styleClass="add_button" stylesheets="@mainframe.css" text="&gt;" />
                   <Button layoutX="673.0" layoutY="78.0" mnemonicParsing="false" style="-fx-background-radius: 8;" styleClass="add_button" stylesheets="@mainframe.css" text="&gt;" />
                   <Button layoutX="673.0" layoutY="137.0" mnemonicParsing="false" style="-fx-background-radius: 8;" styleClass="add_button" stylesheets="@mainframe.css" text="&gt;" />
+                  <Text layoutX="219.0" layoutY="48.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Steven" wrappingWidth="97.53125">
+                     <font>
+                        <Font size="25.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="213.0" layoutY="110.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Newbern" wrappingWidth="109.53125">
+                     <font>
+                        <Font size="25.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="213.0" layoutY="166.0" strokeType="OUTSIDE" strokeWidth="0.0" text="06/03/2003" wrappingWidth="129.53125">
+                     <font>
+                        <Font size="25.0" />
+                     </font>
+                  </Text>
                </children>
             </AnchorPane>
             <AnchorPane layoutX="26.0" layoutY="266.0" prefHeight="167.0" prefWidth="746.0" styleClass="inner_box_frame" stylesheets="@mainframe.css">
@@ -50,6 +65,16 @@
                   <Text layoutX="60.0" layoutY="129.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Password" wrappingWidth="117.13671875">
                      <font>
                         <Font name="Yu Gothic Light" size="15.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="194.0" layoutY="60.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ExampleCSI2300" wrappingWidth="192.53125">
+                     <font>
+                        <Font size="25.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="177.0" layoutY="141.0" strokeType="OUTSIDE" strokeWidth="0.0" text="**********" wrappingWidth="192.53125">
+                     <font>
+                        <Font size="25.0" />
                      </font>
                   </Text>
                </children>
