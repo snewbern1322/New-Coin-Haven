@@ -14,10 +14,10 @@ public class InMemoryDatabase {
 
 
     public InMemoryDatabase() {
-        this.users = new ArrayList<>();
+        /*this.users = new ArrayList<>();
         this.savingsAccounts = new ArrayList<>();
         this.checkingAccounts = new ArrayList<>();
-        this.cards = new ArrayList<>();
+        this.cards = new ArrayList<>();*/
     }
 
     // Methods to add data to the in-memory database
@@ -156,6 +156,64 @@ public class InMemoryDatabase {
 
 
 
+    public static void transferFunds(String fromAccountName, String toAccountName, double amount) {
+        // Get account types based on names
+        String fromAccountType = getAccountType(fromAccountName);
+        String toAccountType = getAccountType(toAccountName);
     
+        // Update balances based on account types
+        switch (fromAccountType) {
+            case "savings":
+                updateSavingsAccountBalance(fromAccountName, -amount); // Deduct amount from source account
+                break;
+            case "checking":
+                updateCheckingAccountBalance(fromAccountName, -amount); // Deduct amount from source account
+                break;
+            // Add cases for other account types if needed
+            default:
+                System.out.println("Invalid source account type");
+                return;
+        }
+    
+        switch (toAccountType) {
+            case "savings":
+                updateSavingsAccountBalance(toAccountName, amount);  // Add amount to destination account
+                break;
+            case "checking":
+                updateCheckingAccountBalance(toAccountName, amount);  // Add amount to destination account
+                break;
+            // Add cases for other account types if needed
+            default:
+                System.out.println("Invalid destination account type");
+                // If the destination account type is invalid, you might want to rollback the source account balance change
+                // (e.g., add the deducted amount back to the source account)
+                switch (fromAccountType) {
+                    case "savings":
+                        updateSavingsAccountBalance(fromAccountName, amount);
+                        break;
+                    case "checking":
+                        updateCheckingAccountBalance(fromAccountName, amount);
+                        break;
+                    // Add cases for other account types if needed
+                }
+                return;
+        }
+        System.out.println("Funds transferred successfully");
+    }
 
+    private static void updateAccountBalance(String accountName, double amount, String accountType) {
+        // Determine the account type based on the accountName
+        ArrayList<HashMap<String, String>> accountList = getAccountList(accountType);
+    
+        // Update the balance
+        for (HashMap<String, String> account : accountList) {
+            if (account.get("accountName").equals(accountName)) {
+                double currentBalance = Double.parseDouble(account.get("startingBalance"));
+                double newBalance = currentBalance + amount;
+                account.put("startingBalance", Double.toString(newBalance));
+                System.out.println(accountType + " account balance updated: " + newBalance);
+                break;
+            }
+        }
+    }
 }
