@@ -9,7 +9,7 @@ public class InMemoryDatabase {
     private static ArrayList<HashMap<String, String>> savingsAccounts = new ArrayList<>();
     private static ArrayList<HashMap<String, String>> checkingAccounts = new ArrayList<>();
     private static ArrayList<HashMap<String, String>> cards = new ArrayList<>();
-
+    private static ArrayList<String> tasks = new ArrayList<>();
     
 
 
@@ -20,7 +20,15 @@ public class InMemoryDatabase {
         this.cards = new ArrayList<>();*/
     }
 
-    // Methods to add data to the in-memory database
+    // Methods to add data to the in-memory database------------------------------------------------------
+    //adds task from "Spendings" page
+    public static void addTask(String taskName) {
+        tasks.add(taskName);
+    }
+
+    public static List<String> getTasks() {
+        return new ArrayList<>(tasks);
+    }
 
     public static void addUser(String username, String password) {
         HashMap<String, String> user = new HashMap<>();
@@ -214,6 +222,30 @@ public class InMemoryDatabase {
                 System.out.println(accountType + " account balance updated: " + newBalance);
                 break;
             }
+        }
+    }
+
+    // Method to remove a task
+    public static void removeTask(String taskName) {
+        tasks.remove(taskName);
+        System.out.println("Task removed successfully");
+    }
+
+
+    public static void deductAmount(String accountName, double amount) {
+        // Get the account type based on the account name
+        String accountType = getAccountType(accountName);
+    
+        // Deduct the amount from the account balance
+        switch (accountType) {
+            case "savings":
+                updateSavingsAccountBalance(accountName, -amount);
+                break;
+            case "checking":
+                updateCheckingAccountBalance(accountName, -amount);
+                break;
+            default:
+                System.out.println("Invalid account type");
         }
     }
 }

@@ -3,6 +3,7 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ButtonBar?>
 <?import javafx.scene.control.ListView?>
+<?import javafx.scene.effect.Reflection?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -25,15 +26,18 @@
                   <Font name="Yu Gothic UI Semilight" size="24.0" />
                </font>
             </Text>
-            <Text fill="#0044ff" layoutX="512.0" layoutY="83.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Your Cards">
+            <Text fill="#0044ff" layoutX="512.0" layoutY="83.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Your Cards:">
                <font>
                   <Font name="Yu Gothic UI Semilight" size="24.0" />
                </font>
             </Text>
-            <Text fx:id="currentBalanceText" layoutX="89.0" layoutY="188.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="327.0">
+            <Text fx:id="currentBalanceText" layoutX="89.0" layoutY="188.0" strokeType="OUTSIDE" strokeWidth="0.0" text="..." wrappingWidth="327.0">
                <font>
                   <Font name="Yu Gothic Light" size="64.0" />
                </font>
+               <effect>
+                  <Reflection fraction="0.57" topOpacity="0.15" />
+               </effect>
             </Text>
             <Text layoutX="57.0" layoutY="167.0" strokeType="OUTSIDE" strokeWidth="0.0" text="\$" wrappingWidth="25.0">
                <font>
@@ -52,7 +56,7 @@
             </Text>
             <Line endX="176.33334350585938" layoutX="83.0" layoutY="27.0" opacity="0.1" startX="-63.833335876464844" />
             <ListView fx:id="accountsListView" editable="true" layoutX="23.0" layoutY="42.0" onMouseClicked="#handleAccountSelection" prefHeight="164.0" prefWidth="344.0" />
-            <Button fx:id="deleteButton" layoutX="146.0" layoutY="217.0" mnemonicParsing="false" style="-fx-background-radius: 10;" text="Delete Account" />
+            <Button fx:id="deleteButton" layoutX="146.0" layoutY="217.0" mnemonicParsing="false" style="-fx-background-radius: 10; -fx-background-color: #F96F6F;" text="Delete Account" textFill="WHITE" />
          </children>
       </AnchorPane>
       <AnchorPane layoutX="434.0" layoutY="319.0" prefHeight="265.0" prefWidth="417.0" styleClass="top_frame" stylesheets="@mainframe.css">
@@ -75,7 +79,7 @@
                      <font>
                         <Font size="19.0" />
                      </font></Button>
-                  <ImageView fitHeight="40.0" fitWidth="34.0" layoutX="155.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="40.0" fitWidth="34.0" layoutX="155.0" layoutY="9.0" opacity="0.79" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="file:/C:/Users/Steven%20N/Desktop/OU%20College/credit-cards.png" />
                      </image>
@@ -92,7 +96,7 @@
                      <font>
                         <Font size="19.0" />
                      </font></Button>
-                  <ImageView fitHeight="34.0" fitWidth="34.0" layoutX="272.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="34.0" fitWidth="34.0" layoutX="272.0" layoutY="9.0" opacity="0.79" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="file:/C:/Users/Steven%20N/Desktop/OU%20College/wallet.png" />
                      </image>
@@ -109,7 +113,7 @@
                      <font>
                         <Font size="19.0" />
                      </font></Button>
-                  <ImageView fitHeight="40.0" fitWidth="34.0" layoutX="249.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="40.0" fitWidth="34.0" layoutX="249.0" layoutY="9.0" opacity="0.8" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="file:/C:/Users/Steven%20N/Desktop/OU%20College/piggy-bank.png" />
                      </image>

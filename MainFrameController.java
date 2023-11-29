@@ -16,6 +16,14 @@ public class MainFrameController implements Initializable {
     private BorderPane mainPane;
 
     @FXML
+    private void handleSpendingsPage(ActionEvent event) {
+        System.out.println("You clicked Spendings");
+        FxmlLoader object = new FxmlLoader();
+        Pane view = object.getPage("Spendings");
+        mainPane.setCenter(view);
+    }
+
+    @FXML
     private void handleAddFunds(ActionEvent event) {
         System.out.println("You clicked me!");
         FxmlLoader object = new FxmlLoader();
