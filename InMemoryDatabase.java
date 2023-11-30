@@ -4,6 +4,7 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
+//ArrayList less conflicting with rest of code
 public class InMemoryDatabase {
     private static ArrayList<HashMap<String, String>> users = new ArrayList<>();
     private static ArrayList<HashMap<String, String>> savingsAccounts = new ArrayList<>();

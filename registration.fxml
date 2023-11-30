@@ -64,6 +64,6 @@
          </font>
       </Text>
       <Line endX="33.0" endY="82.0" layoutX="460.0" layoutY="52.0" opacity="0.25" startX="490.0" startY="82.0" />
-      <DatePicker layoutX="613.0" layoutY="339.0" />
+      <DatePicker layoutX="613.0" layoutY="339.0" promptText="mm/dd/yyyy" />
    </children>
 </AnchorPane>

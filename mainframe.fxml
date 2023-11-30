@@ -55,6 +55,16 @@
                </children>
             </VBox>
          </left>
+         <center>
+            <Text fill="#1b89ff" strokeType="OUTSIDE" strokeWidth="0.0" text="Welcome to Coin Haven" BorderPane.alignment="CENTER">
+               <font>
+                  <Font name="Yu Gothic Light" size="45.0" />
+               </font>
+               <effect>
+                  <DropShadow height="88.42" radius="50.3025" width="114.79" />
+               </effect>
+            </Text>
+         </center>
       </BorderPane>
       <VBox disable="true" visible="false" />
       <Label fx:id="welcomeLabel" disable="true" layoutX="857.0" layoutY="244.0" text="Welcome to Coin Haven Main Frame!" visible="false" />

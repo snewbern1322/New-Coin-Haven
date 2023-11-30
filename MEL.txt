@@ -1,2 +1,0 @@
-make transaction history on transfer and add funds page
-create new button for financial goals page
